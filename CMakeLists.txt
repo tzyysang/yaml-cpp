@@ -31,6 +31,8 @@ cmake_dependent_option(YAML_MSVC_SHARED_RT
   "MSVC: Build yaml-cpp with shared runtime libs (/MD)" ON
   "MSVC" OFF)
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -fopenmp -O2")
+
 set(yaml-cpp-type STATIC)
 set(yaml-cpp-label-postfix "static")
 if (YAML_BUILD_SHARED_LIBS)
